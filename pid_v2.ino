@@ -2,7 +2,7 @@ float kp = 46, ki = 0.009, kd = 300;
 float error = 0 , p = 0 , i = 0 , d = 0, pid = 0;
 float pre_e  = 0;
 int ss[5] = {0, 0, 0, 0, 0};
-int initial_speed = 135;
+int initial_speed = 135; //132
 int right_pid, left_pid;
 #define in1 5
 #define in2 4
@@ -88,7 +88,7 @@ void ss_read() {
     digitalWrite(in2, LOW);
     digitalWrite(in3, LOW);
     digitalWrite(in4, HIGH);
-    delay(200);
+    delay(200); //250
     error = -2;
     Serial.println("Turn L45");
   }
